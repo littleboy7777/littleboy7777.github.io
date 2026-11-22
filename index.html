@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="마스터팩토리 MASTER FACTORY - AI, 로봇, 컴퓨터, 서버, 3D 프린팅 기술 공방">
+  <title>마스터팩토리 | MASTER FACTORY</title>
+  <style>
+    :root { color-scheme: dark; --bg:#080e1b; --surface:#101b2e; --line:#253954; --cyan:#39d8fa; --text:#edf7ff; --muted:#9cafc7; --orange:#ffa43b; }
+    * { box-sizing: border-box; } html { scroll-behavior:smooth; }
+    body { margin:0; min-height:100vh; font-family: 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: radial-gradient(ellipse at 75% 5%, #14395b 0%, transparent 45%), radial-gradient(ellipse at 5% 75%, #142338 0%, transparent 37%), var(--bg); color:var(--text); }
+    a { color:inherit; text-decoration:none; }
+    .wrap { max-width:1100px; padding:0 24px; margin:auto; }
+    header { position:sticky;top:0;z-index:2;backdrop-filter:blur(16px);background:#08101dcc;border-bottom:1px solid #33465c66; }
+    .nav { display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px; }
+    .brand { display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1.5px;font-size:17px; }
+    .brandmark { display:grid;place-items:center; width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#0d789f,#143250); border:1px solid #69e4ff80; font-size:14px;box-shadow:0 0 22px #37dcfa33; }
+    nav { display:flex;gap:26px;color:#c8d8e7;font-size:14px; }
+    nav a:hover { color:var(--cyan); }
+    .hero { padding:100px 0 76px;text-align:center; }
+    .eyebrow {display:inline-block;border:1px solid #41d1ea88;border-radius:100px;padding:9px 16px;color:#a6eafa;background:#17395455;font-size:12px;letter-spacing:2px;font-weight:750;}
+    .hero-icon { width:122px;height:122px;margin:28px auto 24px;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#2c6f98,#0b223b 65%);border:2px solid #57dafa;border-radius:30px;box-shadow:0 0 0 7px #43c5e815,0 15px 60px #0bcaf955;transform:rotate(-4deg); }
+    .face { width:75px;height:53px;background:#081526;border:3px solid #9deaff;border-radius:19px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative;box-shadow:inset 0 0 10px #1d91ac;}
+    .face::before {content:"";width:8px;height:16px;border-radius:8px;background:#5dedff;box-shadow:23px 0 #5dedff;transform:translateX(-11px);}
+    .face::after {content:"";width:17px;height:6px;border-bottom:3px solid #5dedff;border-radius:0 0 16px 16px;position:absolute;left:27px;top:28px;}
+    h1 {margin:0;font-size:clamp(40px,7vw,76px);line-height:1.13;letter-spacing:-2px;font-weight:900;}
+    h1 span { background:linear-gradient(90deg,#f3fbff 10%,#52dfff 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+    .english {font-size:clamp(16px,2.7vw,23px);font-weight:800;letter-spacing:5px;margin:12px 0 24px;color:#7dddf2;}
+    .lead {font-size:clamp(16px,2.5vw,19px);line-height:1.9;color:#c7d9e8;max-width:730px;margin:0 auto 26px;}
+    .tags {display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:30px 0 0;}
+    .tags span {border:1px solid #35526c;background:#12263a;padding:10px 15px;border-radius:99px;color:#d2edfd;font-size:13px;font-weight:700;}
+    .section {padding:48px 0 95px;} .section h2 {font-size:27px;text-align:center;margin:0 0 12px;} .subtitle {text-align:center;color:var(--muted);margin:0 0 32px;}
+    .cards {display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+    .card {border:1px solid var(--line);background:linear-gradient(155deg,#182b40,#0d1726);border-radius:20px;padding:28px 23px;min-height:197px;transition:transform .2s,border-color .2s;}
+    .card:hover {transform:translateY(-4px);border-color:#35b9d8;}
+    .emoji {font-size:31px;margin-bottom:14px;} .card h3 {margin:0 0 11px;font-size:20px;} .card p {color:#a7b9ca;font-size:14px;line-height:1.8;margin:0;}
+    footer {border-top:1px solid var(--line);text-align:center;color:#92a7bb;padding:34px 15px 50px;font-size:13px;line-height:1.8;}
+    @media(max-width:740px){.nav{min-height:64px;}nav{gap:12px;font-size:12px}.brand{font-size:13px;letter-spacing:.5px}.brandmark{width:32px;height:32px}.hero{padding:72px 0 52px}.cards{grid-template-columns:1fr}.section{padding-bottom:62px}h1{letter-spacing:-1px}.english{letter-spacing:3px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="#top"><span class="brandmark">MF</span> MASTER FACTORY</a><nav><a href="#about">소개</a><a href="#projects">프로젝트</a></nav></div></header>
+  <main id="top">
+    <section class="wrap hero" id="about">
+      <span class="eyebrow">AI · ROBOTICS · HARDWARE LAB</span>
+      <div class="hero-icon" aria-label="마스터팩토리 로봇 심볼"><div class="face"></div></div>
+      <h1>마스터<span>팩토리</span></h1>
+      <div class="english">MASTER FACTORY</div>
+      <p class="lead">만들고, 고치고, 진화시키다!<br>AI와 로봇, 컴퓨터와 3D 프린팅의 세계를 직접 탐구하는 기술 공방입니다.</p>
+      <div class="tags"><span>🤖 AI &amp; ROBOT</span><span>💻 PC &amp; SERVER</span><span>🛠️ DIY &amp; MODDING</span><span>🧩 3D PRINTING</span></div>
+    </section>
+    <section class="wrap section" id="projects">
+      <h2>마스터팩토리의 작업실</h2><p class="subtitle">직접 연구하고, 만들고, 테스트한 기술 이야기</p>
+      <div class="cards">
+        <article class="card"><div class="emoji">🤖</div><h3>AI · 로봇</h3><p>AI 비서, 로봇 연동, 자동화 시스템과 스마트 기술 실험</p></article>
+        <article class="card"><div class="emoji">🖥️</div><h3>컴퓨터 · 서버</h3><p>PC 제작, 서버 구축, 하드웨어 개조와 성능 테스트</p></article>
+        <article class="card"><div class="emoji">⚙️</div><h3>3D 프린팅 · 제작</h3><p>아이디어를 실제 부품과 작품으로 구현하는 DIY 공방</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>© MASTER FACTORY · 마스터팩토리<br>AI · ROBOT · PC · SERVER · 3D PRINT</footer>
+</body>
+</html>
