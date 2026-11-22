@@ -1,63 +1,185 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="마스터팩토리 MASTER FACTORY - AI, 로봇, 컴퓨터, 서버, 3D 프린팅 기술 공방">
-  <title>마스터팩토리 | MASTER FACTORY</title>
+  <meta name="theme-color" content="#070c17">
+  <meta name="description" content="마스터팩토리 MASTER FACTORY — AI, 로봇, 컴퓨터, 서버, 3D 프린팅을 직접 만들고 실험하는 기술 공방.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="마스터팩토리 | MASTER FACTORY">
+  <meta property="og:description" content="만들고, 고치고, 진화시키다. AI · ROBOT · PC · SERVER · 3D PRINT">
+  <meta property="og:url" content="https://littleboy7777.github.io/">
+  <link rel="icon" href="assets/mf-robot.svg" type="image/svg+xml">
+  <title>마스터팩토리 | MASTER FACTORY — AI · ROBOT · TECH</title>
   <style>
-    :root { color-scheme: dark; --bg:#080e1b; --surface:#101b2e; --line:#253954; --cyan:#39d8fa; --text:#edf7ff; --muted:#9cafc7; --orange:#ffa43b; }
-    * { box-sizing: border-box; } html { scroll-behavior:smooth; }
-    body { margin:0; min-height:100vh; font-family: 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: radial-gradient(ellipse at 75% 5%, #14395b 0%, transparent 45%), radial-gradient(ellipse at 5% 75%, #142338 0%, transparent 37%), var(--bg); color:var(--text); }
-    a { color:inherit; text-decoration:none; }
-    .wrap { max-width:1100px; padding:0 24px; margin:auto; }
-    header { position:sticky;top:0;z-index:2;backdrop-filter:blur(16px);background:#08101dcc;border-bottom:1px solid #33465c66; }
-    .nav { display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px; }
-    .brand { display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1.5px;font-size:17px; }
-    .brandmark { display:grid;place-items:center; width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#0d789f,#143250); border:1px solid #69e4ff80; font-size:14px;box-shadow:0 0 22px #37dcfa33; }
-    nav { display:flex;gap:26px;color:#c8d8e7;font-size:14px; }
-    nav a:hover { color:var(--cyan); }
-    .hero { padding:100px 0 76px;text-align:center; }
-    .eyebrow {display:inline-block;border:1px solid #41d1ea88;border-radius:100px;padding:9px 16px;color:#a6eafa;background:#17395455;font-size:12px;letter-spacing:2px;font-weight:750;}
-    .hero-icon { width:122px;height:122px;margin:28px auto 24px;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#2c6f98,#0b223b 65%);border:2px solid #57dafa;border-radius:30px;box-shadow:0 0 0 7px #43c5e815,0 15px 60px #0bcaf955;transform:rotate(-4deg); }
-    .face { width:75px;height:53px;background:#081526;border:3px solid #9deaff;border-radius:19px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative;box-shadow:inset 0 0 10px #1d91ac;}
-    .face::before {content:"";width:8px;height:16px;border-radius:8px;background:#5dedff;box-shadow:23px 0 #5dedff;transform:translateX(-11px);}
-    .face::after {content:"";width:17px;height:6px;border-bottom:3px solid #5dedff;border-radius:0 0 16px 16px;position:absolute;left:27px;top:28px;}
-    h1 {margin:0;font-size:clamp(40px,7vw,76px);line-height:1.13;letter-spacing:-2px;font-weight:900;}
-    h1 span { background:linear-gradient(90deg,#f3fbff 10%,#52dfff 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-    .english {font-size:clamp(16px,2.7vw,23px);font-weight:800;letter-spacing:5px;margin:12px 0 24px;color:#7dddf2;}
-    .lead {font-size:clamp(16px,2.5vw,19px);line-height:1.9;color:#c7d9e8;max-width:730px;margin:0 auto 26px;}
-    .tags {display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:30px 0 0;}
-    .tags span {border:1px solid #35526c;background:#12263a;padding:10px 15px;border-radius:99px;color:#d2edfd;font-size:13px;font-weight:700;}
-    .section {padding:48px 0 95px;} .section h2 {font-size:27px;text-align:center;margin:0 0 12px;} .subtitle {text-align:center;color:var(--muted);margin:0 0 32px;}
-    .cards {display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-    .card {border:1px solid var(--line);background:linear-gradient(155deg,#182b40,#0d1726);border-radius:20px;padding:28px 23px;min-height:197px;transition:transform .2s,border-color .2s;}
-    .card:hover {transform:translateY(-4px);border-color:#35b9d8;}
-    .emoji {font-size:31px;margin-bottom:14px;} .card h3 {margin:0 0 11px;font-size:20px;} .card p {color:#a7b9ca;font-size:14px;line-height:1.8;margin:0;}
-    footer {border-top:1px solid var(--line);text-align:center;color:#92a7bb;padding:34px 15px 50px;font-size:13px;line-height:1.8;}
-    @media(max-width:740px){.nav{min-height:64px;}nav{gap:12px;font-size:12px}.brand{font-size:13px;letter-spacing:.5px}.brandmark{width:32px;height:32px}.hero{padding:72px 0 52px}.cards{grid-template-columns:1fr}.section{padding-bottom:62px}h1{letter-spacing:-1px}.english{letter-spacing:3px}}
+    :root { color-scheme:dark; --bg:#070c17; --panel:#101a2a; --panel2:#141f31; --line:#2b3b51; --text:#f1f7ff; --muted:#a0aec2; --accent:#42e1ef; --accent2:#5e9fff; --radius:22px; }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+    body:before{content:"";pointer-events:none;position:absolute;z-index:-1;top:0;left:0;right:0;height:890px;background:radial-gradient(ellipse 49% 47% at 80% 38%,#13345185,transparent 73%),radial-gradient(ellipse 50% 30% at 11% 14%,#14253d7d,transparent 74%)}
+    a{color:inherit;text-decoration:none} a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    .container{width:min(1160px,calc(100% - 44px));margin-inline:auto}
+    .eyebrow{font-size:12px;font-weight:900;color:var(--accent);letter-spacing:2.5px;text-transform:uppercase}
+    .muted{color:var(--muted)}
+    .site-header{position:sticky;top:0;z-index:20;background:#080f1ce8;backdrop-filter:blur(18px);border-bottom:1px solid #2a3e546e}
+    .nav-wrap{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand img{height:49px;width:49px;border-radius:50%;background:#071729;border:1px solid #66bdce70}
+    .brand-copy{display:block;font-size:17px;line-height:1.2;font-weight:950;letter-spacing:1.3px;white-space:nowrap}
+    .brand-copy small{display:block;margin-top:5px;font-size:10px;font-weight:700;color:#90adbf;letter-spacing:2.1px}
+    .top-links{display:flex;gap:26px;align-items:center;font-size:13px;font-weight:750;color:#c8d4e3}
+    .top-links a:hover,.footer a:hover{color:var(--accent)}
+    .top-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:45px;padding:12px 18px;border:1px solid #4cdcec94;border-radius:12px;font-size:13px;font-weight:850;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+    .top-cta{white-space:nowrap;color:#071321;background:#55ddec}
+    .top-cta:hover,.button:hover{transform:translateY(-2px)}
+    .button-primary{background:linear-gradient(105deg,#51e3f1,#75aafc);color:#061321;border-color:transparent;box-shadow:0 12px 30px #24c9de22}
+    .button-secondary{background:#15233699;color:#e2f0ff;border-color:#48657d}
+    .mobile-menu{display:none}
+    .hero{padding:92px 0 72px;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:55px}
+    .signal{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:999px;border:1px solid #2c5d72;background:#0c2536;color:#a8eaf3;letter-spacing:1.7px;font-size:11px;font-weight:850}
+    .signal:before{content:"";display:block;width:7px;height:7px;border-radius:50%;background:#54dfed;box-shadow:0 0 12px #55e5f4}
+    h1{font-size:clamp(45px,5.8vw,77px);letter-spacing:-3px;line-height:1.17;margin:26px 0 17px;font-weight:950}
+    h1 span{display:block;background:linear-gradient(100deg,#75eaff,#a4bcff);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .hero-en{font-size:clamp(14px,2vw,20px);color:#b1d8e9;font-weight:850;letter-spacing:5px}
+    .hero-copy{max-width:540px;margin:27px 0 28px;font-size:16px;color:#b2c3d5;line-height:1.95}
+    .hero-copy strong{color:#e3f5ff}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .tag-strip{margin-top:32px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag-strip span{font-size:11px;font-weight:800;color:#b2c5da;border:1px solid #38506b;border-radius:999px;padding:7px 11px;background:#122035}
+    .robot-display{min-height:492px;border:1px solid #365673;border-radius:30px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 50% 40%,#1a4b64 0%,#0d1d34 47%,#08111f 80%);box-shadow:0 30px 80px #0006}
+    .robot-display:before{content:"";position:absolute;inset:20px;opacity:.45;background-image:linear-gradient(#55a6c414 1px,transparent 1px),linear-gradient(90deg,#55a6c414 1px,transparent 1px);background-size:35px 35px;mask-image:radial-gradient(circle,black 30%,transparent 75%)}
+    .robot-display:after{content:"";position:absolute;inset:45px;border:1px solid #48dcf53c;border-radius:50%;box-shadow:0 0 0 29px #35d9ed0a,0 0 0 58px #35d9ed08;z-index:-1}
+    .robot-display img{display:block;position:absolute;width:min(80%,370px);height:auto;top:50%;left:50%;transform:translate(-50%,-52%);filter:drop-shadow(0 20px 38px #00101ecc)}
+    .panel-caption{position:absolute;left:26px;top:24px;font-size:11px;letter-spacing:2px;font-weight:900;color:#8fc6d6}
+    .panel-status{position:absolute;bottom:24px;left:24px;right:24px;border:1px solid #3a6178;background:#071826c9;padding:15px 19px;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .panel-status b{font-size:12px;letter-spacing:2px}.panel-status small{display:block;color:#8ba8b8;font-size:10px}
+    .panel-led{height:10px;width:10px;border-radius:50%;background:#3ce6f5;box-shadow:0 0 20px #3ce6f5}
+    .ribbon{margin-top:12px;padding:22px 0;border-top:1px solid #2a3f547a;border-bottom:1px solid #2a3f547a;background:#0c14228c}
+    .ribbon .container{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:18px 43px;color:#8ba6bc;font-size:12px;letter-spacing:2px;font-weight:850}
+    .ribbon i{font-style:normal;color:#3ed7e6}
+    .section{padding:104px 0 12px}
+    .section-heading{max-width:720px;margin:0 auto 34px;text-align:center}
+    .section-heading h2{font-size:clamp(30px,3.8vw,44px);margin:12px 0 12px;line-height:1.25;letter-spacing:-1.7px}
+    .section-heading p{color:var(--muted);font-size:15px;margin:0}
+    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .about-box{border:1px solid var(--line);background:linear-gradient(160deg,#15253b,#0d1523);border-radius:var(--radius);padding:40px}
+    .about-box strong{font-size:23px;line-height:1.45;display:block;margin:16px 0}
+    .about-box p{color:#b2c3d5;font-size:14px;margin:0;line-height:1.95}
+    .about-points{display:grid;gap:14px}
+    .point{display:flex;gap:14px;align-items:center;padding:18px 21px;border-radius:16px;border:1px solid var(--line);background:#111e30}
+    .point b{display:block;font-size:13px}.point small{color:#9fb1c5;font-size:12px}
+    .point-num{display:grid;place-items:center;min-width:41px;height:41px;border:1px solid #356d7b;border-radius:12px;color:#80d8ee;font-weight:900}
+    .fields{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+    .field{border:1px solid #30445d;border-radius:18px;padding:24px 18px 22px;background:linear-gradient(150deg,#18283c,#0e192a);min-height:207px}
+    .field-no{font-size:12px;color:#6f879b;font-weight:900;letter-spacing:2px}
+    .field-icon{width:52px;height:52px;margin:18px 0 22px;display:grid;place-items:center;border:1px solid #3c778d;border-radius:14px;background:#10283d;color:#6fdaee;font-weight:900;font-size:18px;letter-spacing:.2px}
+    .field h3{font-size:17px;letter-spacing:-.5px;line-height:1.35;margin:0 0 8px}
+    .field p{font-size:12px;line-height:1.7;color:#9bafc3;margin:0}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{border:1px solid var(--line);background:#111c2c;border-radius:20px;overflow:hidden}
+    .project-art{height:155px;display:grid;place-items:center;position:relative;overflow:hidden}
+    .project:nth-child(1) .project-art{background:radial-gradient(circle at 50% 50%,#206a7b77,#102039 70%)}
+    .project:nth-child(2) .project-art{background:radial-gradient(circle at 50% 50%,#345d8d80,#102039 70%)}
+    .project:nth-child(3) .project-art{background:radial-gradient(circle at 50% 50%,#3d738777,#102039 70%)}
+    .project-symbol{font-size:56px;font-weight:950;letter-spacing:-3px;color:#c9f7ff;text-shadow:0 0 35px #43e2ff5a}
+    .project-art:before{content:"";width:200px;height:200px;position:absolute;border:1px dashed #6bc4d763;border-radius:50%}
+    .project-body{padding:22px 24px 25px}
+    .project-body small{font-size:10px;letter-spacing:1.5px;color:#5ed7e9;font-weight:850}
+    .project-body h3{font-size:18px;line-height:1.4;margin:9px 0}
+    .project-body p{margin:0;color:#9fb1c4;font-size:13px;line-height:1.8}
+    .notice{margin:22px 0 0;color:#849cb0;font-size:12px;text-align:center}
+    .youtube-panel{margin-top:94px;display:grid;grid-template-columns:1fr 1fr;gap:28px;border:1px solid #395975;border-radius:28px;overflow:hidden;background:linear-gradient(120deg,#14273d,#0a1423)}
+    .youtube-art{min-height:350px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;position:relative;background:radial-gradient(circle at 48% 50%,#21445e 0%,#0b1b30 66%)}
+    .youtube-art:before{content:"";position:absolute;inset:36px;border:1px dashed #2b7690;border-radius:22px}
+    .play{width:104px;height:74px;border-radius:23px;background:linear-gradient(140deg,#ff5a67,#d61934);display:grid;place-items:center;box-shadow:0 16px 44px #e71a3662;z-index:1}
+    .play span{width:0;height:0;border-top:17px solid transparent;border-bottom:17px solid transparent;border-left:29px solid white;margin-left:7px}
+    .youtube-art small{font-size:11px;letter-spacing:3px;font-weight:900;color:#a9c9dc;z-index:1}
+    .youtube-copy{padding:48px 44px 42px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    .youtube-copy h2{font-size:clamp(27px,3vw,37px);letter-spacing:-1.2px;line-height:1.3;margin:14px 0 17px}
+    .youtube-copy p{color:#b1c2d4;font-size:14px;line-height:1.9;margin:0 0 25px}
+    .footer{margin-top:108px;border-top:1px solid #2a3c51;padding:37px 0 42px}
+    .footer-content{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .footer strong{font-size:13px;letter-spacing:1.7px}.footer p{margin:4px 0 0;color:#8599af;font-size:12px}
+    .footer-links{display:flex;gap:22px;color:#a8bace;font-size:12px;font-weight:750}
+    @media(max-width:1040px){.hero{gap:26px}.fields{grid-template-columns:repeat(3,1fr)}.robot-display{min-height:440px}}
+    @media(max-width:760px){
+      .container{width:min(100% - 32px,580px)}
+      .nav-wrap{min-height:66px}.brand img{width:41px;height:41px}.brand-copy{font-size:13px}.brand-copy small{font-size:9px}
+      .top-links{display:none}.top-cta{font-size:11px;padding:9px 11px;min-height:38px}
+      .hero{display:flex;flex-direction:column;gap:30px;padding:65px 0 48px;text-align:center}
+      .hero h1{font-size:clamp(43px,11vw,59px);letter-spacing:-2.5px}.hero-copy{font-size:14px;margin:25px auto}.hero-en{letter-spacing:3px}
+      .actions,.tag-strip{justify-content:center}.button{font-size:12px}
+      .robot-display{width:100%;min-height:380px;max-width:520px}.robot-display img{width:285px}
+      .ribbon .container{gap:12px 20px;font-size:10px}
+      .section{padding-top:72px}.about-wrap,.projects,.youtube-panel{grid-template-columns:1fr}
+      .about-box{padding:27px}.fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{padding:19px 15px;min-height:193px}
+      .field h3{font-size:15px}.field-icon{margin:15px 0}.youtube-panel{margin-top:75px}.youtube-art{min-height:245px}.youtube-copy{padding:29px}
+      .footer{margin-top:75px}.footer-content{flex-direction:column;text-align:center}.footer-links{justify-content:center}
+    }
+    @media(max-width:390px){.brand-copy{letter-spacing:.4px}.top-cta{padding:8px}.field{min-height:185px}.tag-strip span{font-size:10px}.robot-display{min-height:310px}.robot-display img{width:255px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
 </head>
 <body>
-  <header><div class="wrap nav"><a class="brand" href="#top"><span class="brandmark">MF</span> MASTER FACTORY</a><nav><a href="#about">소개</a><a href="#projects">프로젝트</a></nav></div></header>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="마스터팩토리 홈"><img src="assets/mf-robot.svg" alt="마스터팩토리 MF 로봇 로고" width="49" height="49"><span class="brand-copy">MASTER FACTORY<small>마스터팩토리 · TECH LAB</small></span></a>
+      <nav class="top-links" aria-label="메인 메뉴"><a href="#about">브랜드</a><a href="#fields">기술 분야</a><a href="#projects">프로젝트</a><a href="#youtube">유튜브</a></nav>
+      <a class="top-cta" href="https://www.youtube.com/@MasterFactoryLab" target="_blank" rel="noopener noreferrer">▶ 유튜브 방문 ↗</a>
+    </div>
+  </header>
   <main id="top">
-    <section class="wrap hero" id="about">
-      <span class="eyebrow">AI · ROBOTICS · HARDWARE LAB</span>
-      <div class="hero-icon" aria-label="마스터팩토리 로봇 심볼"><div class="face"></div></div>
-      <h1>마스터<span>팩토리</span></h1>
-      <div class="english">MASTER FACTORY</div>
-      <p class="lead">만들고, 고치고, 진화시키다!<br>AI와 로봇, 컴퓨터와 3D 프린팅의 세계를 직접 탐구하는 기술 공방입니다.</p>
-      <div class="tags"><span>🤖 AI &amp; ROBOT</span><span>💻 PC &amp; SERVER</span><span>🛠️ DIY &amp; MODDING</span><span>🧩 3D PRINTING</span></div>
-    </section>
-    <section class="wrap section" id="projects">
-      <h2>마스터팩토리의 작업실</h2><p class="subtitle">직접 연구하고, 만들고, 테스트한 기술 이야기</p>
-      <div class="cards">
-        <article class="card"><div class="emoji">🤖</div><h3>AI · 로봇</h3><p>AI 비서, 로봇 연동, 자동화 시스템과 스마트 기술 실험</p></article>
-        <article class="card"><div class="emoji">🖥️</div><h3>컴퓨터 · 서버</h3><p>PC 제작, 서버 구축, 하드웨어 개조와 성능 테스트</p></article>
-        <article class="card"><div class="emoji">⚙️</div><h3>3D 프린팅 · 제작</h3><p>아이디어를 실제 부품과 작품으로 구현하는 DIY 공방</p></article>
+    <div class="container hero">
+      <div>
+        <span class="signal">DESIGN · BUILD · EVOLVE</span>
+        <h1>만들고, 고치고,<span>진화시키다.</span></h1>
+        <div class="hero-en">MASTER FACTORY</div>
+        <p class="hero-copy"><strong>마스터팩토리</strong>는 AI와 로봇, 컴퓨터와 서버, 3D 프린팅의 가능성을 직접 실험하는 기술 공방입니다. 호기심을 설계하고, 아이디어를 현실로 만들어 갑니다.</p>
+        <div class="actions"><a class="button button-primary" href="https://www.youtube.com/@MasterFactoryLab" target="_blank" rel="noopener noreferrer">▶ 유튜브 채널 보기 ↗</a><a class="button button-secondary" href="#projects">프로젝트 살펴보기 ↓</a></div>
+        <div class="tag-strip" aria-label="주요 분야"><span>AI</span><span>ROBOTICS</span><span>PC</span><span>SERVER</span><span>3D PRINT</span></div>
+      </div>
+      <div class="robot-display" aria-label="마스터팩토리 로봇 엠블럼을 활용한 브랜드 아트">
+        <div class="panel-caption">MASTER FACTORY / 01</div>
+        <img src="assets/mf-robot.svg" alt="푸른 조명이 빛나는 미래형 MF 로봇" width="370" height="370">
+        <div class="panel-status"><div><b>CREATIVE TECH LAB</b><small>TECHNOLOGY · MAKING · EXPERIMENTS</small></div><span class="panel-led" aria-hidden="true"></span></div>
+      </div>
+    </div>
+    <div class="ribbon" aria-hidden="true"><div class="container"><span>AI LAB</span><i>✦</i><span>ROBOTICS</span><i>✦</i><span>HARDWARE</span><i>✦</i><span>MAKER CULTURE</span></div></div>
+
+    <section class="container section" id="about">
+      <div class="section-heading"><span class="eyebrow">ABOUT MASTER FACTORY</span><h2>호기심이 기술이 되는 곳</h2><p>보기만 하는 기술을 넘어, 직접 만들고 이해하고 공유합니다.</p></div>
+      <div class="about-wrap">
+        <div class="about-box"><span class="eyebrow">OUR PHILOSOPHY</span><strong>실험하고, 배우고, 다시 만드는<br>즐거움을 기록합니다.</strong><p>마스터팩토리는 AI·로봇·IT 장비를 직접 다루는 제작형 채널입니다. 작동 원리를 탐구하고, 다양한 하드웨어와 소프트웨어를 연결하며, 테스트 과정을 함께 나누고자 합니다.</p></div>
+        <div class="about-points"><div class="point"><span class="point-num">01</span><div><b>직접 만드는 경험</b><small>조립 · 개조 · 제작 · 3D 프린팅</small></div></div><div class="point"><span class="point-num">02</span><div><b>원리를 확인하는 실험</b><small>시스템 구성 · 테스트 · 성능 비교</small></div></div><div class="point"><span class="point-num">03</span><div><b>과정을 함께 공유</b><small>설정 과정 · 시행착오 · 제작 기록</small></div></div></div>
       </div>
     </section>
+
+    <section class="container section" id="fields">
+      <div class="section-heading"><span class="eyebrow">FIVE TECH FIELDS</span><h2>마스터팩토리의 기술 분야</h2><p>하나의 영역에 머무르지 않고 기술과 기술을 연결합니다.</p></div>
+      <div class="fields">
+        <article class="field"><span class="field-no">01 / INTELLIGENCE</span><div class="field-icon" aria-hidden="true">AI</div><h3>인공지능</h3><p>AI 비서, 자동화, 지능형 시스템 활용과 실험</p></article>
+        <article class="field"><span class="field-no">02 / ROBOTICS</span><div class="field-icon" aria-hidden="true">RB</div><h3>로봇</h3><p>로봇 연동, 동작 제어 및 스마트 기기 연구</p></article>
+        <article class="field"><span class="field-no">03 / COMPUTING</span><div class="field-icon" aria-hidden="true">PC</div><h3>컴퓨터</h3><p>PC 제작, 부품 조합, 최적화와 성능 테스트</p></article>
+        <article class="field"><span class="field-no">04 / SYSTEMS</span><div class="field-icon" aria-hidden="true">SRV</div><h3>서버</h3><p>홈서버, 네트워크, 고성능 시스템 구성</p></article>
+        <article class="field"><span class="field-no">05 / FABRICATION</span><div class="field-icon" aria-hidden="true">3D</div><h3>3D 프린팅</h3><p>모델링, 출력, 부품 제작과 DIY 아이디어</p></article>
+      </div>
+    </section>
+
+    <section class="container section" id="projects">
+      <div class="section-heading"><span class="eyebrow">THE WORKSHOP</span><h2>기술 프로젝트 아카이브</h2><p>앞으로 공개할 제작기와 실험을 분야별로 정리할 공간입니다.</p></div>
+      <div class="projects">
+        <article class="project"><div class="project-art"><span class="project-symbol">AI / RB</span></div><div class="project-body"><small>ROBOTICS & AI</small><h3>AI와 로봇의 연결</h3><p>지능형 로봇, AI 보조 기능 및 자동화 실험을 기록할 공간입니다.</p></div></article>
+        <article class="project"><div class="project-art"><span class="project-symbol">PC / SRV</span></div><div class="project-body"><small>COMPUTING SYSTEMS</small><h3>컴퓨터와 서버 제작</h3><p>하드웨어 구성, 튜닝, 성능 비교 등의 콘텐츠를 모을 공간입니다.</p></div></article>
+        <article class="project"><div class="project-art"><span class="project-symbol">3D / DIY</span></div><div class="project-body"><small>FABRICATION LAB</small><h3>3D 프린팅과 DIY</h3><p>모델링부터 부품 출력과 조립까지 제작 과정을 담을 공간입니다.</p></div></article>
+      </div>
+      <p class="notice">※ 현재 이 영역은 콘텐츠 공개를 위한 기본 구조이며 실제 영상·프로젝트 게시물은 추가 전입니다.</p>
+    </section>
+
+    <section class="container youtube-panel" id="youtube">
+      <div class="youtube-art" aria-hidden="true"><div class="play"><span></span></div><small>MASTER FACTORY / YOUTUBE</small></div>
+      <div class="youtube-copy"><span class="eyebrow">WATCH & EXPLORE</span><h2>만드는 과정은<br>유튜브에서 이어집니다.</h2><p>AI, 로봇, 컴퓨터, 서버, 3D 프린팅 콘텐츠를 마스터팩토리 유튜브 채널에서 만나보세요. 새 영상이 올라오면 채널에서 확인할 수 있습니다.</p><a class="button button-primary" href="https://www.youtube.com/@MasterFactoryLab" target="_blank" rel="noopener noreferrer">▶ @MasterFactoryLab 방문 ↗</a></div>
+    </section>
   </main>
-  <footer>© MASTER FACTORY · 마스터팩토리<br>AI · ROBOT · PC · SERVER · 3D PRINT</footer>
+  <footer class="footer"><div class="container footer-content"><div><strong>MASTER FACTORY · 마스터팩토리</strong><p>만들고, 고치고, 진화시키다. © 2026 MASTER FACTORY</p></div><div class="footer-links"><a href="https://www.youtube.com/@MasterFactoryLab" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://github.com/littleboy7777/littleboy7777.github.io" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#top">맨 위로 ↑</a></div></div></footer>
 </body>
 </html>
