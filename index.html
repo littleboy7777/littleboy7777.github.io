@@ -9,7 +9,8 @@
   <meta property="og:title" content="마스터팩토리 | MASTER FACTORY">
   <meta property="og:description" content="만들고, 고치고, 진화시키다. AI · ROBOT · PC · SERVER · 3D PRINT">
   <meta property="og:url" content="https://littleboy7777.github.io/">
-  <link rel="icon" href="assets/mf-robot.svg" type="image/svg+xml">
+  <meta property="og:image" content="https://littleboy7777.github.io/assets/mf-cute-hero.webp">
+  <link rel="icon" href="assets/mf-cute-avatar.webp" type="image/webp">
   <title>마스터팩토리 | MASTER FACTORY — AI · ROBOT · TECH</title>
   <style>
     :root { color-scheme:dark; --bg:#070c17; --panel:#101a2a; --panel2:#141f31; --line:#2b3b51; --text:#f1f7ff; --muted:#a0aec2; --accent:#42e1ef; --accent2:#5e9fff; --radius:22px; }
@@ -49,7 +50,7 @@
     .robot-display{min-height:492px;border:1px solid #365673;border-radius:30px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 50% 40%,#1a4b64 0%,#0d1d34 47%,#08111f 80%);box-shadow:0 30px 80px #0006}
     .robot-display:before{content:"";position:absolute;inset:20px;opacity:.45;background-image:linear-gradient(#55a6c414 1px,transparent 1px),linear-gradient(90deg,#55a6c414 1px,transparent 1px);background-size:35px 35px;mask-image:radial-gradient(circle,black 30%,transparent 75%)}
     .robot-display:after{content:"";position:absolute;inset:45px;border:1px solid #48dcf53c;border-radius:50%;box-shadow:0 0 0 29px #35d9ed0a,0 0 0 58px #35d9ed08;z-index:-1}
-    .robot-display img{display:block;position:absolute;width:min(80%,370px);height:auto;top:50%;left:50%;transform:translate(-50%,-52%);filter:drop-shadow(0 20px 38px #00101ecc)}
+    .robot-display img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 33%;border-radius:inherit} .robot-display .panel-caption,.robot-display .panel-status{z-index:2} .robot-display::before{z-index:1;background:linear-gradient(180deg,#0715244c,transparent 22%,transparent 63%,#06121cc2);opacity:1;mask-image:none}
     .panel-caption{position:absolute;left:26px;top:24px;font-size:11px;letter-spacing:2px;font-weight:900;color:#8fc6d6}
     .panel-status{position:absolute;bottom:24px;left:24px;right:24px;border:1px solid #3a6178;background:#071826c9;padding:15px 19px;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
     .panel-status b{font-size:12px;letter-spacing:2px}.panel-status small{display:block;color:#8ba8b8;font-size:10px}
@@ -109,21 +110,21 @@
       .hero{display:flex;flex-direction:column;gap:30px;padding:65px 0 48px;text-align:center}
       .hero h1{font-size:clamp(43px,11vw,59px);letter-spacing:-2.5px}.hero-copy{font-size:14px;margin:25px auto}.hero-en{letter-spacing:3px}
       .actions,.tag-strip{justify-content:center}.button{font-size:12px}
-      .robot-display{width:100%;min-height:380px;max-width:520px}.robot-display img{width:285px}
+      .robot-display{width:100%;min-height:380px;max-width:520px}.robot-display img{width:100%}
       .ribbon .container{gap:12px 20px;font-size:10px}
       .section{padding-top:72px}.about-wrap,.projects,.youtube-panel{grid-template-columns:1fr}
       .about-box{padding:27px}.fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{padding:19px 15px;min-height:193px}
       .field h3{font-size:15px}.field-icon{margin:15px 0}.youtube-panel{margin-top:75px}.youtube-art{min-height:245px}.youtube-copy{padding:29px}
       .footer{margin-top:75px}.footer-content{flex-direction:column;text-align:center}.footer-links{justify-content:center}
     }
-    @media(max-width:390px){.brand-copy{letter-spacing:.4px}.top-cta{padding:8px}.field{min-height:185px}.tag-strip span{font-size:10px}.robot-display{min-height:310px}.robot-display img{width:255px}}
+    @media(max-width:390px){.brand-copy{letter-spacing:.4px}.top-cta{padding:8px}.field{min-height:185px}.tag-strip span{font-size:10px}.robot-display{min-height:310px}.robot-display img{width:100%}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="마스터팩토리 홈"><img src="assets/mf-robot.svg" alt="마스터팩토리 MF 로봇 로고" width="49" height="49"><span class="brand-copy">MASTER FACTORY<small>마스터팩토리 · TECH LAB</small></span></a>
+      <a class="brand" href="#top" aria-label="마스터팩토리 홈"><img src="assets/mf-cute-avatar.webp" alt="마스터팩토리 귀여운 MF 로봇 로고" width="49" height="49"><span class="brand-copy">MASTER FACTORY<small>마스터팩토리 · TECH LAB</small></span></a>
       <nav class="top-links" aria-label="메인 메뉴"><a href="#about">브랜드</a><a href="#fields">기술 분야</a><a href="#projects">프로젝트</a><a href="#youtube">유튜브</a></nav>
       <a class="top-cta" href="https://www.youtube.com/@MasterFactoryLab" target="_blank" rel="noopener noreferrer">▶ 유튜브 방문 ↗</a>
     </div>
@@ -140,7 +141,7 @@
       </div>
       <div class="robot-display" aria-label="마스터팩토리 로봇 엠블럼을 활용한 브랜드 아트">
         <div class="panel-caption">MASTER FACTORY / 01</div>
-        <img src="assets/mf-robot.svg" alt="푸른 조명이 빛나는 미래형 MF 로봇" width="370" height="370">
+        <img src="assets/mf-cute-hero.webp" alt="친근한 표정의 마스터팩토리 MF 로봇" width="370" height="370">
         <div class="panel-status"><div><b>CREATIVE TECH LAB</b><small>TECHNOLOGY · MAKING · EXPERIMENTS</small></div><span class="panel-led" aria-hidden="true"></span></div>
       </div>
     </div>
