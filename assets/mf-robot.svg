@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+<title id="title">마스터팩토리 MF 로봇 엠블럼</title>
+<desc id="desc">메탈릭 실버와 청록색 라이트의 미래형 로봇</desc>
+<defs>
+ <radialGradient id="bg" cx=".43" cy=".24" r=".85"><stop stop-color="#173b54"/><stop offset=".65" stop-color="#0a1729"/><stop offset="1" stop-color="#050a14"/></radialGradient>
+ <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset=".34" stop-color="#a4c2d1"/><stop offset=".68" stop-color="#eefaff"/><stop offset="1" stop-color="#6a899e"/></linearGradient>
+ <linearGradient id="trim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55f4ff"/><stop offset="1" stop-color="#1687bd"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="7"/></filter>
+ <clipPath id="round"><circle cx="240" cy="240" r="218"/></clipPath>
+</defs>
+<circle cx="240" cy="240" r="232" fill="#071120"/>
+<circle cx="240" cy="240" r="226" fill="none" stroke="#91a8ba" stroke-width="7"/>
+<circle cx="240" cy="240" r="216" fill="url(#bg)" stroke="#1dcdf4" stroke-width="4"/>
+<circle cx="240" cy="240" r="204" fill="none" stroke="#1b526a" stroke-width="2" stroke-dasharray="3 16"/>
+<g opacity=".4" stroke="#1a89b7" fill="none" stroke-width="2"><path d="M75 117l43 43h55"/><path d="M412 136l-48 48h-47"/><path d="M76 340l48-48h45"/><path d="M405 335l-43-43h-41"/></g>
+<g clip-path="url(#round)">
+ <path d="M105 431c9-91 56-132 135-132s128 41 135 132" fill="#0b243a" stroke="#53839c" stroke-width="8"/>
+ <path d="M116 427c5-65 34-102 83-114l41 39 43-39c48 13 76 50 81 114" fill="url(#steel)" stroke="#243d54" stroke-width="9"/>
+ <path d="M188 329l52 37 53-37-14 79h-79z" fill="#11273a" stroke="#2b4961" stroke-width="6"/>
+ <path d="M220 362h40v38h-40z" fill="url(#trim)" opacity=".9"/>
+ <text x="240" y="394" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="900" fill="#041421">MF</text>
+ <path d="M153 150c1-60 38-104 87-104 52 0 90 44 90 104v96c0 51-41 88-90 88-49 0-87-37-87-88z" fill="url(#steel)" stroke="#2d465a" stroke-width="10"/>
+ <path d="M168 156c4-48 32-80 72-80 43 0 70 32 73 80l-19 15-106 0z" fill="#dceaf1" stroke="#698ba1" stroke-width="5"/>
+ <path d="M152 172c-5 4-9 16-9 28v35c0 17 11 26 26 26h12v-89z" fill="#5a7e94" stroke="#243b52" stroke-width="6"/>
+ <circle cx="164" cy="216" r="27" fill="#102b41" stroke="#9bd6e9" stroke-width="8"/>
+ <circle cx="164" cy="216" r="17" fill="#0b263b" stroke="#27d5ff" stroke-width="4"/>
+ <path d="M328 172c5 4 9 16 9 28v35c0 17-11 26-26 26h-12v-89z" fill="#5a7e94" stroke="#243b52" stroke-width="6"/>
+ <circle cx="316" cy="216" r="27" fill="#102b41" stroke="#9bd6e9" stroke-width="8"/>
+ <circle cx="316" cy="216" r="17" fill="#0b263b" stroke="#27d5ff" stroke-width="4"/>
+ <path d="M175 177c14-24 36-32 65-32s51 8 65 32l-7 70c-13 17-33 27-58 27s-45-10-58-27z" fill="#061321" stroke="#233e55" stroke-width="7"/>
+ <path d="M189 207l41 7-12 16-32-11zM291 207l-41 7 12 16 32-11z" fill="#34dcff" filter="url(#glow)" opacity=".85"/>
+ <path d="M189 207l41 7-12 16-32-11zM291 207l-41 7 12 16 32-11z" fill="#5ae8ff"/>
+ <path d="M208 253q32 14 64 0" fill="none" stroke="#7d99ab" stroke-width="5" stroke-linecap="round"/>
+ <path d="M201 95q39-17 78 0" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+</g>
+<circle cx="240" cy="240" r="218" fill="none" stroke="#21d6fa" stroke-width="3" opacity=".8"/>
+</svg>
